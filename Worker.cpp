@@ -26,24 +26,24 @@ WORKER::WORKER(
 
 void WORKER::input()
 {
-    std::wcout << L"Ââåäèòå ÔÈÎ ðàáîòíèêà: ";
+    std::wcout << L"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¤Ð˜Ðž Ñ€Ð°Ð±Ð¾Ñ‚Ð½Ð¸ÐºÐ°: ";
     std::getline(std::wcin, fullName);
 
-    std::wcout << L"Ââåäèòå äîëæíîñòü: ";
+    std::wcout << L"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð¾Ð»Ð¶Ð½Ð¾ÑÑ‚ÑŒ: ";
     std::getline(std::wcin, position);
 
-    std::wcout << L"Ââåäèòå çàðïëàòó: ";
+    std::wcout << L"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð·Ð°Ñ€Ð¿Ð»Ð°Ñ‚Ñƒ: ";
     while (!(std::wcin >> salary) || salary < 0)
     {
-        std::wcout << L"Îøèáêà. Ââåäèòå êîððåêòíóþ çàðïëàòó: ";
+        std::wcout << L"ÐžÑˆÐ¸Ð±ÐºÐ°. Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½ÑƒÑŽ Ð·Ð°Ñ€Ð¿Ð»Ð°Ñ‚Ñƒ: ";
         std::wcin.clear();
         std::wcin.ignore(std::numeric_limits<std::streamsize>::max(), L'\n');
     }
 
-    std::wcout << L"Ââåäèòå ãîä ïîñòóïëåíèÿ íà ðàáîòó: ";
+    std::wcout << L"Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð³Ð¾Ð´ Ð¿Ð¾ÑÑ‚ÑƒÐ¿Ð»ÐµÐ½Ð¸Ñ Ð½Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ: ";
     while (!(std::wcin >> startYear) || startYear <= 0)
     {
-        std::wcout << L"Îøèáêà. Ââåäèòå êîððåêòíûé ãîä: ";
+        std::wcout << L"ÐžÑˆÐ¸Ð±ÐºÐ°. Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð³Ð¾Ð´: ";
         std::wcin.clear();
         std::wcin.ignore(std::numeric_limits<std::streamsize>::max(), L'\n');
     }
@@ -53,11 +53,11 @@ void WORKER::input()
 
 void WORKER::display(int currentYear) const
 {
-    std::wcout << L"ÔÈÎ: " << fullName << L'\n';
-    std::wcout << L"Äîëæíîñòü: " << position << L'\n';
-    std::wcout << L"Çàðïëàòà: " << salary << L'\n';
-    std::wcout << L"Ãîä ïîñòóïëåíèÿ: " << startYear << L'\n';
-    std::wcout << L"Ñòàæ: " << getExperience(currentYear) << L" ëåò\n";
+    std::wcout << L"Ð¤Ð˜Ðž: " << fullName << L'\n';
+    std::wcout << L"Ð”Ð¾Ð»Ð¶Ð½Ð¾ÑÑ‚ÑŒ: " << position << L'\n';
+    std::wcout << L"Ð—Ð°Ñ€Ð¿Ð»Ð°Ñ‚Ð°: " << salary << L'\n';
+    std::wcout << L"Ð“Ð¾Ð´ Ð¿Ð¾ÑÑ‚ÑƒÐ¿Ð»ÐµÐ½Ð¸Ñ: " << startYear << L'\n';
+    std::wcout << L"Ð¡Ñ‚Ð°Ð¶: " << getExperience(currentYear) << L" Ð»ÐµÑ‚\n";
 }
 
 int WORKER::getExperience(int currentYear) const
